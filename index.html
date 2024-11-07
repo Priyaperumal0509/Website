@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanga Lakshmi - XR Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqk1w2/knoG80jLGa+i8kzoL8N5hPXD+uU+r/Q6NMrkLXx+uU1cUC4/+gdL6sKvy1KdFqFJw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> <style>
+/* Include your existing styles here*/
+
+
+        /* Futuristic styles */
+        body {
+            background: #111;
+            color: #eee;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+
+
+        .hero-section {
+            background: radial-gradient(circle, rgba(25, 25, 25, 0.8), #000), url('./images/hero-background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            /* Parallax effect */
+            padding: 200px 0; /* Increased padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Vertically center content */
+            min-height: 100vh;
+            text-align: center;
+        }
+
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            animation: glow 2s infinite alternate;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            color: #888;
+        }
+
+
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+
+
+
+        .glow-text {
+            animation: glow 2s infinite alternate;
+        }
+
+
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            }
+
+            100% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+            }
+        }
+
+
+
+
+        /* Particle.js container */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place behind other content */
+}
+    </style>
+</head>
+
+<body>
+
+    <div id="particles-js"></div>
+
+    <header
+        class="bg-gradient-to-r from-purple-800 to-pink-700 py-8 backdrop-blur-md bg-opacity-50 sticky top-0 z-50">
+        <div class="container mx-auto py-4 flex justify-between items-center px-4">
+            <a href="#" class="text-white text-3xl font-bold">Thanga Lakshmi</a>
+
+            <nav class="hidden md:flex">
+                <ul class="flex gap-8 text-white">
+                    <li><a href="#home" class="hover:text-gray-300">Home</a></li>
+                    <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                    <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="btn btn-primary md:hidden">Menu</button>
+        </div>
+    </header>
+
+
+    <section id="home" class="hero-section">
+
+        <h1 class="hero-title text-5xl md:text-7xl glow-text">Thanga Lakshmi</h1>
+        <h2 class="hero-subtitle text-xl md:text-2xl mt-4 text-gray-400">XR Developer</h2>
+
+    </section>
+
+
+
+    <section id="about" class="about-section py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title glow-text">About Me</h2>
+            <div class="about-content grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+                <div class="about-image order-last md:order-first">
+                    <img src="./images/about-me.jpg" alt="Thanga Lakshmi"
+                        class="rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
+                </div>
+                <div class="about-text">
+                    <p class="text-lg leading-relaxed mb-4 text-gray-400">
+                        I'm a passionate XR developer specializing in crafting immersive and interactive
+                        experiences. I thrive on pushing the boundaries of what's possible with VR, AR, and MR. My mission is
+                        to transform innovative ideas into engaging realities that captivate and inspire.
+                    </p>
+
+                    <p class="text-lg leading-relaxed mb-4 text-gray-400">
+                        I'm proficient in a variety of tools and technologies, allowing me to create cutting-edge XR
+                        applications tailored to diverse needs. From concept to completion, I'm dedicated to delivering
+                        high-quality experiences that leave a lasting impact.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-4 text-gray-400">
+                        Let's collaborate to bring your XR vision to life.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section py-20 bg-gray-900 bg-opacity-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title glow-text text-white">My Projects</h2>
+            <div class="projects-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+
+                <div class="project-card">
+                    <img src="./images/project1.jpg" alt="Project 1" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-white">VR Training Simulation</h3>
+                    <p class="text-gray-400 text-sm">
+                        A cutting-edge VR training program designed to enhance safety and
+                        efficiency.
+                    </p>
+                </div>
+
+
+                <div class="project-card">
+                    <img src="./images/project2.jpg" alt="Project 2" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-white">AR Shopping Experience</h3>
+                    <p class="text-gray-400 text-sm">Revolutionizing retail with an engaging AR
+                        experience.</p>
+                </div>
+
+
+                <div class="project-card">
+                    <img src="./images/project3.jpg" alt="Project 3" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-white">MR Medical Visualization</h3>
+                    <p class="text-gray-400 text-sm">
+                        Empowering healthcare with an innovative MR
+                        visualization tool.
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title glow-text">Contact Me</h2>
+            <form class="contact-form mx-auto max-w-md">
+
+                <input type="text" id="name" placeholder="Your Name"
+                    class="w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600">
+
+                <input type="email" id="email" placeholder="Your Email"
+                    class="w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600">
+
+                <textarea id="message" placeholder="Your Message"
+                    class="w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 resize-none h-32"></textarea>
+
+                <button type="submit"
+                    class="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-600">Send
+                    Message</button>
+
+
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer py-8 bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+
+            <p class="text-gray-400 text-sm">&copy; 2024 Thanga Lakshmi. All rights reserved.</p>
+            <div class="flex justify-center mt-4 space-x-6">
+
+
+                <a href="#" target="_blank"
+                    class="text-gray-400 hover:text-white transition-colors duration-300"><i
+                        class="fab fa-linkedin fa-lg"></i></a>
+                <a href="#" target="_blank"
+                    class="text-gray-400 hover:text-white transition-colors duration-300"><i
+                        class="fab fa-github fa-lg"></i></a>
+                <a href="#" target="_blank"
+                    class="text-gray-400 hover:text-white transition-colors duration-300"><i
+                        class="fab fa-twitter fa-lg"></i></a>
+
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('particles.js config loaded');
+        });
+    </script>
+    <script>
+  // Add this script after the particlesJS script
+  // Adjust the particles.json path if necessary
+  fetch('./particles.json')
+    .then(response => response.json())
+    .then(data => {
+      particlesJS('particles-js', data);
+    })
+    .catch(error => {
+      console.error('Error loading particles.json:', error);
+    });
+
+    // ... (rest of your JavaScript code)
+
+    ScrollReveal().reveal('.animated-element', {
+      distance: '50px',
+      duration: 1500,
+      easing: 'cubic-bezier(.215,.61,.355,1)',
+      interval: 200,
+
+
+      viewFactor: 0.2,
+
+
+      reset: false // Only reveal once
+    });
+
+  </script>
+</body>
+
+</html>
